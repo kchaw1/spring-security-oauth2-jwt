@@ -25,7 +25,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private AuthProvider provider;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<UserRole> userRole = new HashSet<>();
 
     @Builder
